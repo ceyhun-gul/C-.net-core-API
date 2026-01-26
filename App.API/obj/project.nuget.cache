@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "0RjtUsvSmS0=",
+  "dgSpecHash": "DHeoKuNopqM=",
   "success": true,
   "projectFilePath": "/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/App.API.csproj",
   "expectedPackageFiles": [
     "/Users/ceyhungul/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
+    "/Users/ceyhungul/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
+    "/Users/ceyhungul/.nuget/packages/fluentvalidation.aspnetcore/11.3.1/fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "/Users/ceyhungul/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.11.0/fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

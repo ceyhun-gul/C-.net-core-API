@@ -13,3 +13,4 @@
 /Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.Services/obj/Debug/net8.0/refint/App.Services.dll
 /Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.Services/obj/Debug/net8.0/App.Services.pdb
 /Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.Services/obj/Debug/net8.0/ref/App.Services.dll
+/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.Services/obj/Debug/net8.0/App.Services.sourcelink.json

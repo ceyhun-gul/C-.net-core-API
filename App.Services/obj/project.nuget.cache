@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "UDO8yz/Ybdw=",
+  "dgSpecHash": "rXSGy3zpHXA=",
   "success": true,
   "projectFilePath": "/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.Services/App.Services.csproj",
   "expectedPackageFiles": [
     "/Users/ceyhungul/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
+    "/Users/ceyhungul/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
+    "/Users/ceyhungul/.nuget/packages/fluentvalidation.aspnetcore/11.3.1/fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "/Users/ceyhungul/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.11.0/fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/ceyhungul/.nuget/packages/microsoft.data.sqlclient/5.1.5/microsoft.data.sqlclient.5.1.5.nupkg.sha512",
