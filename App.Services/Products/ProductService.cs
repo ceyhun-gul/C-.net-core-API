@@ -2,6 +2,7 @@ using System.Net;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
+using Services.ExceptionHandler;
 
 namespace Services;
 
@@ -74,6 +75,7 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
 
     public async Task<ServiceResult<CreateProductResponse>> CreateAsync(CreateProductRequest request)
     {
+        // throw new Exception("Exception");
         var anyProduct = await productRepository.Where(x => x.Name == request.Name).AnyAsync();
 
         if (anyProduct)

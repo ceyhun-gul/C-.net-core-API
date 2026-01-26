@@ -21,6 +21,9 @@ builder.Services.AddRepositories(builder.Configuration).AddServices(builder.Conf
 builder.Services.Configure<ApiBehaviorOptions>(options => options.SuppressModelStateInvalidFilter = true);
 var app = builder.Build();
 
+
+app.UseExceptionHandler(x=>{});
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
