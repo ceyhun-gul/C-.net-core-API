@@ -1,10 +1,12 @@
 using System.Net;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 
 namespace Services;
 
-public class ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork) : IProductService
+public class ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper)
+    : IProductService
 {
     public async Task<ServiceResult<List<ProductDto>>> GetTopPriceProductAsync(int count)
     {
@@ -21,7 +23,13 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
     {
         var products = await productRepository.GetAll().ToListAsync();
 
-        var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Stock, p.Price)).ToList();
+        #region manuel mapping
+
+        // var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Stock, p.Price)).ToList();
+
+        #endregion
+
+        var productsAsDto = mapper.Map<List<ProductDto>>(products);
 
         return ServiceResult<List<ProductDto>>.Success(productsAsDto);
     }
@@ -31,7 +39,14 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
         var products = await productRepository.GetAll().Skip((pageNumber - 1) * pageSize).Take((pageSize))
             .ToListAsync();
 
-        var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Stock, p.Price)).ToList();
+        #region manuel mapping
+
+        // var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Stock, p.Price)).ToList();
+
+        #endregion
+
+        var productsAsDto = mapper.Map<List<ProductDto>>(products);
+
 
         return ServiceResult<List<ProductDto>>.Success(productsAsDto);
     }
@@ -42,10 +57,17 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
 
         if (product is null)
         {
-            ServiceResult<ProductDto>.Fail("Product not found", HttpStatusCode.NotFound);
+            return ServiceResult<ProductDto>.Fail("Product not found", HttpStatusCode.NotFound);
         }
 
+        #region manuel mapping
+
         var productAsDto = new ProductDto(product!.Id, product.Name, product.Stock, product.Price);
+
+        #endregion
+
+        var productsAsDto = mapper.Map<ProductDto>(product);
+
 
         return ServiceResult<ProductDto>.Success(productAsDto!, HttpStatusCode.OK);
     }

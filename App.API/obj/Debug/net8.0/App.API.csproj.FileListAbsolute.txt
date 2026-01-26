@@ -145,3 +145,9 @@
 /Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/FluentValidation.dll
 /Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
 /Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/AutoMapper.dll
+/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/ceyhungul/Desktop/Backend/Course-1-N-Layer-Arch/App.API/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
