@@ -104,6 +104,14 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
             return ServiceResult.Fail("Product not found", HttpStatusCode.NotFound);
         }
 
+        var isProductNameExist =
+            await productRepository.Where(x => x.Name == request.Name && x.Id != product.Id).AnyAsync();
+
+        if (isProductNameExist)
+        {
+            return ServiceResult.Fail("Product already in DB", HttpStatusCode.NotFound);
+        }
+
         product.Name = request.Name;
         product.Price = request.Price;
         product.Stock = request.Stock;
