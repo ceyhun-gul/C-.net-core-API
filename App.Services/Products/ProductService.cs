@@ -13,7 +13,8 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
     {
         var products = await productRepository.GetTopPriceProductsAsync(count);
         // manuel mapper -> en hizli calisir
-        var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Stock, p.Price)).ToList();
+        // var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Stock, p.Price)).ToList();
+        var productsAsDto = mapper.Map<List<ProductDto>>(products);
         return new ServiceResult<List<ProductDto>>()
         {
             Data = productsAsDto
@@ -83,12 +84,8 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
             return ServiceResult<CreateProductResponse>.Fail("Product not found", HttpStatusCode.BadRequest);
         }
 
-        var product = new Product()
-        {
-            Name = request.Name,
-            Stock = request.Stock,
-            Price = request.Price
-        };
+        var product = mapper.Map<Product>(request);
+
         await productRepository.AddAsync(product);
         await unitOfWork.SaveChangesAsync();
         return ServiceResult<CreateProductResponse>.SuccessAsCreated(new CreateProductResponse(product.Id),
@@ -112,9 +109,11 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
             return ServiceResult.Fail("Product already in DB", HttpStatusCode.NotFound);
         }
 
-        product.Name = request.Name;
-        product.Price = request.Price;
-        product.Stock = request.Stock;
+        // product.Name = request.Name;
+        // product.Price = request.Price;
+        // product.Stock = request.Stock;
+
+        product = mapper.Map(request, product);
 
         productRepository.Update(product);
         await unitOfWork.SaveChangesAsync();
