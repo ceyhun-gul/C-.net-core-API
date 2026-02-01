@@ -3,9 +3,9 @@ using Repositories;
 
 namespace Services.Mapping;
 
-public class MappingProfile : Profile
+public class ProductMappingProfile : Profile
 {
-    public MappingProfile()
+    public ProductMappingProfile()
     {
         CreateMap<Product, ProductDto>().ReverseMap();
 

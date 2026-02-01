@@ -14,7 +14,7 @@ public class CreateProductRequestValidator : AbstractValidator<CreateProductRequ
         RuleFor(request => request.Name)
             .NotEmpty().WithMessage("Product name is required")
             .Length(3, 10).WithMessage("Product name must be between 3 and 10 characters");
-            // .Must(MustUniqueProductName).WithMessage("Product name already exists");
+        // .Must(MustUniqueProductName).WithMessage("Product name already exists");
 
         // Price validator
         RuleFor(request => request.Price)
@@ -24,6 +24,8 @@ public class CreateProductRequestValidator : AbstractValidator<CreateProductRequ
         // Stock validator
         RuleFor(request => request.Stock)
             .InclusiveBetween(0, 100).WithMessage("Stock must be between 0 and 100");
+
+        RuleFor(request => request.CategoryId).GreaterThan(0).WithMessage("Category id must be greater than 0");
     }
 
     // 1. way sync validation
@@ -31,6 +33,4 @@ public class CreateProductRequestValidator : AbstractValidator<CreateProductRequ
     // {
     //     return !_productRepository.Where(x => x.Name == name).Any();
     // }
-    
-    
 }

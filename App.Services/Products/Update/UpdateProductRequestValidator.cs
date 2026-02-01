@@ -20,5 +20,7 @@ public class UpdateProductRequestValidator : AbstractValidator<UpdateProductRequ
         // Stock validator
         RuleFor(request => request.Stock)
             .InclusiveBetween(0, 100).WithMessage("Stock must be between 0 and 100");
+
+        RuleFor(request => request.CategoryId).GreaterThan(0).WithMessage("Category id must be greater than 0");
     }
 }

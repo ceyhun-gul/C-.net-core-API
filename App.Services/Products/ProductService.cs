@@ -64,7 +64,7 @@ public class ProductService(IProductRepository productRepository, IUnitOfWork un
 
         #region manuel mapping
 
-        var productAsDto = new ProductDto(product!.Id, product.Name, product.Stock, product.Price);
+        var productAsDto = new ProductDto(product!.Id, product.Name, product.Stock, product.Price, product.CategoryId);
 
         #endregion
 
