@@ -2,7 +2,7 @@ using Repositories.Categories;
 
 namespace Repositories;
 
-public class Product
+public class Product : IBaseAuditEntity
 {
     public int Id { get; set; }
     public string Name { get; set; } = null!;
@@ -12,4 +12,8 @@ public class Product
     public int CategoryId { get; set; }
 
     public Category Category { get; set; } = default!;
+
+    public DateTime Created { get; set; }
+
+    public DateTime? Updated { get; set; }
 }
